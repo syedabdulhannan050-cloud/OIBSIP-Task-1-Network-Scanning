@@ -1,44 +1,51 @@
 # Oasis Infobyte Internship — Task 1
 ## Basic Network Scanning with Nmap
 
-### Project Overview
-This project demonstrates basic network scanning using Nmap on my own Windows computer.
+### 1. Project Overview
+This project uses Nmap to scan my own computer and identify open ports, associated services, and operating-system information.
 
-### Objectives
+### 2. Objectives
 - Perform a basic network scan.
-- Identify open ports and available services.
-- Attempt operating system detection.
-- Save scan results for analysis.
+- Identify open ports and services.
+- Perform service-version detection.
+- Attempt operating-system detection.
+- Save scan results and document security observations.
 
-### Tools Used
+### 3. Tools Used
 - Nmap
 - Windows PowerShell
-- Windows operating system
+- Windows computer
 
-### Scans Performed
-1. **Basic scan:** Checked whether the target host was reachable.
-2. **Service detection:** Identified open ports and associated services.
-3. **OS detection:** Attempted to identify the target operating system.
+### 4. Commands Used
 
-### Target
-127.0.0.1 (localhost — my own computer)
+```powershell
+nmap 127.0.0.1
+nmap -sV 127.0.0.1
+nmap -O 127.0.0.1
+```
 
-### Results
-The scans were performed against the local machine. The detailed findings, including detected ports and OS-detection output, are available in the saved scan result files.
+The target `127.0.0.1` is the loopback address, which refers to my own computer.
 
-### Files
-- Scan output `.txt` files: saved Nmap results.
-- `analysis.md`: observations and explanations.
-- `screenshots/`: evidence of the commands and results.
+### 5. Files and Evidence
+- `nmap_scan_results.txt` — saved scan results.
+- `nmap_os_detection.txt` — saved OS detection results.
+- `scan_analysis.md` — analysis of the scan findings.
+- `os_detection_analysis.md` — analysis of OS detection.
+- `Screenshots/` — screenshots showing scan evidence.
 
-### Learning Outcomes
-- Learned basic Nmap commands.
-- Practised identifying open ports and services.
-- Learned how to save scan output to files.
-- Explored OS detection and documented the results.
+### 6. Security Observations
+Open ports indicate that services may be listening for connections. Their presence is not automatically a vulnerability. Each service should be checked to confirm that it is necessary, appropriately configured, and protected.
 
-### Disclaimer
-All scans were performed against my own local computer for educational purposes.
+See `scan_analysis.md` for port-specific findings and potential risks.
+
+### 7. Ethical Use
+I performed these scans against my own computer. Nmap should only be used on systems and networks that I own or have explicit permission to assess. Scanning without authorization may violate policies or laws.
+
+### 8. Conclusion
+This project helped me understand basic port scanning, service detection, OS detection, saving scan output, and documenting security observations. Nmap supports network inventory and security assessments by helping identify exposed services.
+
+### 9. Reference
+Official Nmap documentation: https://nmap.org/book/
 
 ### Internship
 Oasis Infobyte — Security Analyst / Cyber Security Internship# OIBSIP
